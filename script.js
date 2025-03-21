@@ -82,14 +82,11 @@ function updateTarget(target){
           } else if (visibility === "Privado") {
               console.log("Cai aqui no privado");
               document.querySelector(".send-info").textContent = `Enviando para ${recipient} (privado)`;
-          } else {
-              console.log("DEU MAIS ERRADO QUE A PF PROCURANDO PICA");
           }
       }
   }
 
   if (target.parentElement.classList.contains("visibility-list")) {
-      // 🔥 Remover 'selected' de todos os itens antes de adicionar ao novo
       document.querySelectorAll(".visibility-list li").forEach((li) => li.classList.remove("selected"));
       
       target.classList.add("selected"); // Agora o item clicado recebe 'selected'
